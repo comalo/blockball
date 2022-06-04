@@ -40,7 +40,7 @@ class Block:
 
 
     def bei_tastendruck(self, welche_taste, taste_modifikator, spiel):
-        pass
+         pass
 
     def ist_anderer_rechts(self, anderer_block : 'Block'):
         ich_rechts = self.mitte_x + self.breite/2
@@ -60,9 +60,9 @@ class Spieler(Block):
 
     def bei_tastendruck(self, welche_taste, taste_modifikator, spiel):
         if welche_taste == taste.MOTION_LEFT:
-            self.diff_x = -abs(self.diff_x)
+            self.diff_x = -50
         if welche_taste == taste.MOTION_RIGHT:
-            self.diff_x = abs(self.diff_x)
+            self.diff_x = 50
 
         if welche_taste == taste.MOTION_UP:
             self.diff_y = abs(self.diff_y)
@@ -75,17 +75,17 @@ class Blockweg(Block):
     pass
 
 
-dinge = [Block(breite=90, höhe=10, mitte_x=444, mitte_y=123, farbe=(0, 0, 255), diff_x=0, diff_y=0),
-         Block(breite=90, höhe=10, mitte_x=55, mitte_y=137, farbe=(0, 0, 255), diff_x=0, diff_y=0),
-         Block(breite=90, höhe=10, mitte_x=554, mitte_y=148, farbe=(0, 0, 137), diff_x=0, diff_y=0),
-         Block(breite=90, höhe=10, mitte_x=404, mitte_y=233, farbe=(22, 77, 255), diff_x=0, diff_y=0),
-         Block(breite=90, höhe=10, mitte_x=364, mitte_y=153, farbe=(0, 0, 25), diff_x=0, diff_y=0),
-         Block(breite=90, höhe=10, mitte_x=288, mitte_y=478, farbe=(111, 0, 255), diff_x=0, diff_y=0),
-         Block(breite=90, höhe=10, mitte_x=343, mitte_y=293, farbe=(4, 97, 28), diff_x=0, diff_y=0),
-         Block(breite=90, höhe=10, mitte_x=46, mitte_y=166, farbe=(66, 2, 255), diff_x=0, diff_y=0),
-         Block(breite=90, höhe=10, mitte_x=124, mitte_y=122, farbe=(44, 0, 5), diff_x=0, diff_y=0),
+dinge = [Block(breite=90, höhe=10, mitte_x=86, mitte_y=140, farbe=(0, 0, 255), diff_x=0, diff_y=0),
+         Block(breite=90, höhe=10, mitte_x=387, mitte_y=229, farbe=(0, 0, 255), diff_x=0, diff_y=0),
+         Block(breite=90, höhe=10, mitte_x=98, mitte_y=326, farbe=(0, 0, 137), diff_x=0, diff_y=0),
+         Block(breite=90, höhe=10, mitte_x=401, mitte_y=67, farbe=(22, 77, 255), diff_x=0, diff_y=0),
+         Block(breite=90, höhe=10, mitte_x=229, mitte_y=165, farbe=(0, 0, 25), diff_x=0, diff_y=0),
+         Block(breite=90, höhe=10, mitte_x=185, mitte_y=418, farbe=(111, 0, 255), diff_x=0, diff_y=0),
+         Block(breite=90, höhe=10, mitte_x=372, mitte_y=274, farbe=(4, 97, 28), diff_x=0, diff_y=0),
+         Block(breite=90, höhe=10, mitte_x=168, mitte_y=256, farbe=(66, 2, 255), diff_x=0, diff_y=0),
+         Block(breite=90, höhe=10, mitte_x=246, mitte_y=396, farbe=(44, 0, 5), diff_x=0, diff_y=0),
          Spieler(breite=10, höhe=10, mitte_x=20, mitte_y=160, farbe=(222, 222,9), diff_x=-0,diff_y=100),
-        Block (breite=90, höhe=10, mitte_x=232, mitte_y=23, farbe=(255, 23, 205), diff_x=0, diff_y=0),
+        Block (breite=90, höhe=10, mitte_x=445, mitte_y=323, farbe=(255, 23, 205), diff_x=0, diff_y=0),
         Blockweg(breite=100, höhe=70, mitte_x=60, mitte_y=500, farbe=(107, 23, 5), diff_x=-0, diff_y=0),
          Blockweg(breite=100, höhe=70, mitte_x=141, mitte_y=500, farbe=(107, 60, 5), diff_x=-0, diff_y=0),
         Blockweg(breite=100, höhe=70, mitte_x=232, mitte_y=500, farbe=(107, 23, 5), diff_x=-0, diff_y=0),
